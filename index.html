@@ -22,7 +22,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316213F'/%3E%3Cg fill='%238CC8EA'%3E%3Crect x='9' y='6' width='14' height='4.5' rx='2.2'/%3E%3Crect x='10.5' y='12.5' width='12' height='4.5' rx='2.2'/%3E%3Crect x='12' y='19' width='10' height='4.5' rx='2.2'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,62..100,400..800&family=Manrope:wght@400;500;600;700&family=Fira+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,62..100,400..800&family=Manrope:wght@400;500;600;700&family=Fira+Mono:wght@400;500&display=swap">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -263,57 +263,6 @@ section{padding-block:clamp(80px,11vw,140px)}
 .member .ph{width:58px;height:58px;border-radius:14px;flex:none;background:var(--oak-soft);display:grid;place-items:center;font:700 1.15rem var(--display);color:var(--oak)}
 .member b{display:block;font-size:.97rem}.member small{color:var(--mute);font-size:.82rem}
 @media(max-width:900px){.story{grid-template-columns:1fr}.frame{aspect-ratio:4/4.4}.team{grid-template-columns:1fr}}
-
-/* philosophy wall: their real signage (oak slats + 3D acrylic mono letters), rebuilt in code */
-.philo{padding-bottom:0;background:var(--paper)}
-.philo .sh{margin-bottom:44px}
-.wall{--sx:4px;--sy:5px;position:relative;display:grid;grid-template-columns:clamp(70px,22vw,300px) 1fr;min-height:clamp(420px,46vw,600px);overflow:hidden;isolation:isolate;background:#d6d5d1}
-.slats{position:relative;background:
-  repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 11px),
-  repeating-linear-gradient(0deg,rgba(90,50,20,.06) 0 1px,transparent 1px 5px,rgba(90,50,20,.05) 5px 6px,transparent 6px 17px),
-  repeating-linear-gradient(90deg,rgba(24,16,10,.88) 0 5px,rgba(24,16,10,.25) 5px 7px,transparent 7px 40px),
-  repeating-linear-gradient(90deg,#b07a4b 0,#d0a172 8px,#be8a5c 17px,#d9ad80 27px,#b98352 40px);
-  box-shadow:inset -26px 0 34px -10px rgba(0,0,0,.35)}
-.slats::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,236,210,.18),transparent 30%,transparent 70%,rgba(0,0,0,.22))}
-.hook{position:absolute;top:44%;width:16px;height:30px;border-radius:3px;background:linear-gradient(90deg,#b77a44,#e2a96d 45%,#a96a35);box-shadow:3px 6px 6px rgba(0,0,0,.35)}
-.hook::after{content:"";position:absolute;left:-12px;top:20px;width:26px;height:9px;border-radius:3px;background:linear-gradient(180deg,#e0a56a,#a7672f);box-shadow:2px 5px 5px rgba(0,0,0,.3)}
-.plaster{position:relative;display:flex;flex-direction:column;justify-content:center;gap:30px;padding:clamp(40px,6vw,90px) var(--gutr) clamp(40px,6vw,80px) clamp(28px,6vw,110px);
-  background:radial-gradient(70% 90% at var(--lx,62%) 18%,#f4f3f0 0%,#e3e2de 45%,#cfceca 100%)}
-.plaster::before{content:"";position:absolute;inset:0;pointer-events:none;background:
-  linear-gradient(90deg,transparent 0 22%,rgba(255,255,255,.22) 26%,transparent 31%,transparent 64%,rgba(255,255,255,.16) 69%,transparent 75%);mix-blend-mode:soft-light;animation:drift 14s ease-in-out infinite alternate}
-@keyframes drift{to{transform:translateX(6%)}}
-.qs{list-style:none;margin:0;padding:0;display:grid;position:relative;z-index:1}
-.q{grid-area:1/1;align-self:center}
-.q p{margin:0;font:700 clamp(1.55rem,4.1vw,3.7rem)/1.28 var(--mono);letter-spacing:.02em;color:#1a1c21;max-width:15ch}
-.q .w{display:inline-block;white-space:nowrap}
-.q .c{display:inline-block;text-shadow:var(--sx) var(--sy) 5px rgba(0,0,0,.30),1px 1px 0 rgba(0,0,0,.45)}
-.q b{font-weight:700;color:#24478c}
-.q b .c{text-shadow:var(--sx) var(--sy) 5px rgba(0,0,0,.30),1px 1px 0 rgba(10,25,70,.7)}
-.js .q{visibility:hidden}
-.js .q.on,.js .q.out{visibility:visible}
-.js .q .c{opacity:0;transform:translateY(-.16em);text-shadow:none}
-.js .q.on .c{opacity:1;transform:none;text-shadow:var(--sx) var(--sy) 5px rgba(0,0,0,.30),1px 1px 0 rgba(0,0,0,.45);transition:opacity 1.2s cubic-bezier(.33,0,.2,1),transform 1.4s cubic-bezier(.22,1,.36,1),text-shadow 1.6s cubic-bezier(.33,0,.2,1);transition-delay:calc(var(--i)*var(--inStep,55ms))}
-.js .q.on b .c{text-shadow:var(--sx) var(--sy) 5px rgba(0,0,0,.30),1px 1px 0 rgba(10,25,70,.7)}
-.js .q.out .c{opacity:0;transform:translateY(.1em);filter:blur(1.5px);transition:opacity 1s cubic-bezier(.45,0,.55,1),transform 1.1s cubic-bezier(.45,0,.55,1),filter 1.1s cubic-bezier(.45,0,.55,1);transition-delay:calc(var(--i)*var(--outStep,32ms))}
-html:not(.js) .q:not(:first-child){display:none}
-.qmeta{position:relative;z-index:1;display:grid;gap:16px;max-width:520px}
-.qgr{font:400 1.05rem/1.5 var(--sans);color:#4b4f57;min-height:3em;transition:opacity 1.2s cubic-bezier(.33,0,.2,1),transform 1.2s cubic-bezier(.33,0,.2,1)}
-.qgr.hide{opacity:0;transform:translateY(6px)}
-.qbar{display:flex;align-items:center;gap:12px;font:500 .78rem var(--mono);color:#5a5d63;font-variant-numeric:tabular-nums}
-.qbar i{position:relative;flex:1;max-width:220px;height:2px;background:rgba(0,0,0,.14);overflow:hidden}
-.qbar i b{position:absolute;inset:0;background:#24478c;transform:scaleX(0);transform-origin:left}
-.qbar i b.run{animation:qfill var(--dur,6s) linear forwards}
-@keyframes qfill{to{transform:scaleX(1)}}
-.qroom{position:absolute;right:var(--gutr);top:clamp(24px,4vw,48px);z-index:0;font:700 clamp(5rem,12vw,11rem)/1 var(--mono);color:transparent;-webkit-text-stroke:1.5px rgba(26,28,33,.13);text-shadow:6px 8px 14px rgba(0,0,0,.06);transition:opacity 1.4s cubic-bezier(.33,0,.2,1),transform 1.6s cubic-bezier(.33,0,.2,1)}
-.qroom.hide{opacity:0;transform:translateY(-14px)}
-.wall-cap{position:absolute;right:var(--gutr);bottom:18px;z-index:1;font:500 .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.38)}
-@media(max-width:700px){
-  .wall{grid-template-columns:58px 1fr;min-height:0}
-  .hook{display:none}.qroom{font-size:4.2rem;top:18px}
-  .plaster{padding:56px var(--gutr) 64px 26px;gap:24px}
-  .q p{font-size:clamp(1.3rem,6.2vw,1.9rem);max-width:none}
-  .wall-cap{display:none}
-}
 
 /* process */
 .steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
@@ -686,36 +635,11 @@ details p{color:var(--mute);padding-bottom:22px;max-width:62ch}
   </div>
 </section>
 
-<!-- PHILOSOPHY WALL -->
-<section class="philo" id="filosofia" aria-labelledby="philo-h">
-  <div class="wrap">
-    <div class="sh">
-      <div><span class="eyebrow" data-r>04 · Η φιλοσοφία μας</span><h2 id="philo-h" data-r="2">Τρεις φράσεις στους τοίχους μας. <span class="k">Μία φιλοσοφία.</span></h2></div>
-      <p data-r="3">Τις βλέπετε γραμμένες στους τοίχους του Physio Anaplasis. Είναι αυτό που θέλουμε να θυμάστε σε κάθε συνεδρία.</p>
-    </div>
-  </div>
-  <div class="wall" id="wall">
-    <div class="slats" aria-hidden="true"><i class="hook" style="left:22%"></i><i class="hook" style="left:52%"></i><i class="hook" style="left:82%"></i></div>
-    <div class="plaster">
-      <ul class="qs" id="qs">
-        <li class="q" data-gr="Η αλλαγή είναι προσωπική υπόθεση."><p lang="en">It is personal matter to <b>change</b>.</p></li>
-        <li class="q" data-gr="Η ζωή είναι ισορροπία ανάμεσα στην ξεκούραση και την κίνηση."><p lang="en">Life is a balance between <b>rest</b> and <b>movement</b>.</p></li>
-        <li class="q" data-gr="Η αργή πρόοδος είναι καλύτερη από καμία πρόοδο."><p lang="en">Slow <b>progress</b> is better than no <b>progress</b>.</p></li>
-      </ul>
-      <div class="qmeta">
-        <p class="qgr" id="qgr">Η αλλαγή είναι προσωπική υπόθεση.</p>
-        <div class="qbar" aria-hidden="true"><span id="qn">01</span><i><b id="qfill"></b></i><span>03</span></div>
-      </div>
-      <span class="qroom" id="qroom" aria-hidden="true">01</span>
-    </div>
-  </div>
-</section>
-
 <!-- PROCESS -->
-<section>
+<section style="padding-top:0">
   <div class="wrap">
     <div class="sh">
-      <div><span class="eyebrow" data-r>05 · Η διαδικασία</span><h2 data-r="2">Από την πρώτη επίσκεψη <span class="k">ως την επιστροφή.</span></h2></div>
+      <div><span class="eyebrow" data-r>04 · Η διαδικασία</span><h2 data-r="2">Από την πρώτη επίσκεψη <span class="k">ως την επιστροφή.</span></h2></div>
       <p data-r="3">Ξέρετε από την αρχή τι θα γίνει, πόσο θα κρατήσει και πώς θα καταλάβετε ότι πάτε καλά.</p>
     </div>
     <div class="steps" id="steps">
@@ -732,7 +656,7 @@ details p{color:var(--mute);padding-bottom:22px;max-width:62ch}
 <section id="xoros" style="padding-top:0">
   <div class="wrap">
     <div class="sh">
-      <div><span class="eyebrow" data-r>06 · Ο χώρος</span><h2 data-r="2">Ένας χώρος που <span class="k">σας ηρεμεί</span> από την πόρτα.</h2></div>
+      <div><span class="eyebrow" data-r>05 · Ο χώρος</span><h2 data-r="2">Ένας χώρος που <span class="k">σας ηρεμεί</span> από την πόρτα.</h2></div>
       <p data-r="3">Ιδιωτικές αίθουσες θεραπείας, πλήρως εξοπλισμένος χώρος αποκατάστασης και ένα περιβάλλον που δεν θυμίζει νοσοκομείο.</p>
     </div>
     <div class="gallery">
@@ -749,7 +673,7 @@ details p{color:var(--mute);padding-bottom:22px;max-width:62ch}
 <section class="proof">
   <div class="wrap">
     <div class="sh" style="margin-bottom:34px">
-      <div><span class="eyebrow" data-r>07 · Εμπιστοσύνη</span><h2 data-r="2" style="color:var(--white)">Η καλύτερη σύσταση <span class="k">είναι ο επόμενος ασθενής.</span></h2></div>
+      <div><span class="eyebrow" data-r>06 · Εμπιστοσύνη</span><h2 data-r="2" style="color:var(--white)">Η καλύτερη σύσταση <span class="k">είναι ο επόμενος ασθενής.</span></h2></div>
     </div>
     <div class="awards" data-r>
       <div class="award"><span class="medal" aria-hidden="true">★</span><div><b>2024 · Χρυσό</b><small>Αετοί της Υγείας</small></div></div>
@@ -770,7 +694,7 @@ details p{color:var(--mute);padding-bottom:22px;max-width:62ch}
 <section id="rantevou">
   <div class="wrap booking">
     <div class="side">
-      <span class="eyebrow" data-r>08 · Ραντεβού</span>
+      <span class="eyebrow" data-r>07 · Ραντεβού</span>
       <h2 data-r="2">Κλείστε σε <span class="k">30 δευτερόλεπτα.</span></h2>
       <p data-r="3">Διαλέξτε πρόβλημα, μέρα και ώρα. Επιβεβαιώνουμε εμείς τηλεφωνικά ή στο WhatsApp, συνήθως την ίδια μέρα.</p>
       <div class="direct" data-r="4">
@@ -802,7 +726,7 @@ details p{color:var(--mute);padding-bottom:22px;max-width:62ch}
 <!-- FAQ -->
 <section style="padding-top:0">
   <div class="wrap faq">
-    <div><span class="eyebrow" data-r>09 · Συχνές ερωτήσεις</span><h2 data-r="2">Πριν την πρώτη επίσκεψη</h2></div>
+    <div><span class="eyebrow" data-r>08 · Συχνές ερωτήσεις</span><h2 data-r="2">Πριν την πρώτη επίσκεψη</h2></div>
     <div data-r="3">
       <details><summary>Χρειάζομαι παραπεμπτικό γιατρού;<i></i></summary><p>Για ιδιωτική συνεδρία όχι. Αν θέλετε κάλυψη από ΕΟΠΥΥ, χρειάζεται ηλεκτρονικό παραπεμπτικό από ορθοπαιδικό ή φυσίατρο. Ρωτήστε μας και σας εξηγούμε τη διαδικασία.</p></details>
       <details><summary>Πόσες συνεδρίες θα χρειαστώ;<i></i></summary><p>Εξαρτάται από το πρόβλημα. Μετά την αξιολόγηση, σας λέμε έναν εκτιμώμενο αριθμό και τον επανεξετάζουμε κάθε εβδομάδα με βάση την πρόοδο.</p></details>
@@ -954,47 +878,6 @@ function pick(k){const v=A[k];
   <div><a class="btn dark magnetic" href="#rantevou" id="areaCta">Κλείστε για: ${v.n} <span class="arr">→</span></a></div></div>`;
   $('#areaCta').onclick=()=>{B.issue=v.n;renderIssue()};
 }
-
-/* philosophy wall: auto-rotating quotes
-   timeline per quote: letters leave one by one -> new letters arrive one by one -> quote stays still to be read */
-(()=>{
-  const room=$('#qroom'),wall=$('#wall'),qs=[...document.querySelectorAll('#qs .q')],gr=$('#qgr'),qn=$('#qn'),fill=$('#qfill');
-  const IN_STEP=55,IN_DUR=1400,OUT_STEP=32,OUT_DUR=1100,READ=4800;
-  // split every quote into word/char spans (the text stays in the HTML for SEO)
-  qs.forEach(li=>{let i=0;const walk=n=>{[...n.childNodes].forEach(ch=>{
-      if(ch.nodeType===3){const frag=document.createDocumentFragment();
-        ch.textContent.split(/(\s+)/).forEach(w=>{if(!w)return;if(/^\s+$/.test(w)){frag.append(' ');return}
-          const ws=document.createElement('span');ws.className='w';
-          [...w].forEach(c=>{const cs=document.createElement('span');cs.className='c';cs.style.setProperty('--i',i++);cs.textContent=c;ws.append(cs)});frag.append(ws)});
-        ch.replaceWith(frag)}
-      else walk(ch)})};walk(li.querySelector('p'));li.dataset.n=i});
-  wall.style.setProperty('--inStep',IN_STEP+'ms');wall.style.setProperty('--outStep',OUT_STEP+'ms');wall.style.setProperty('--dur',READ+'ms');
-  let cur=0,timer=null,visible=false,waiting=false,started=false;
-  const n=li=>+li.dataset.n;
-  function bar(run){fill.classList.remove('run');void fill.offsetWidth;if(run&&!RM)fill.classList.add('run')}
-  function read(){bar(true);timer=setTimeout(leave,READ)}                       // 1) reading time
-  function leave(){                                                              // 2) letters leave one by one
-    if(!visible||document.hidden){waiting=true;return}
-    const prev=qs[cur];bar(false);
-    if(RM){prev.classList.remove('on');cur=(cur+1)%qs.length;arrive();return}
-    prev.classList.remove('on');prev.classList.add('out');gr.classList.add('hide');room.classList.add('hide');
-    timer=setTimeout(()=>{prev.classList.remove('out');cur=(cur+1)%qs.length;arrive()},n(prev)*OUT_STEP+OUT_DUR+150);
-  }
-  function arrive(){                                                             // 3) new letters arrive one by one
-    const q=qs[cur],total=RM?0:n(q)*IN_STEP+IN_DUR;
-    q.classList.add('on');qn.textContent='0'+(cur+1);room.textContent='0'+(cur+1);
-    setTimeout(()=>{gr.textContent=q.dataset.gr;gr.classList.remove('hide');room.classList.remove('hide')},total*.45);
-    timer=setTimeout(read,total);
-  }
-  qs[0].classList.add('on');
-  new IntersectionObserver(es=>{visible=es[0].isIntersecting;
-    if(visible&&!started){started=true;read()}
-    else if(visible&&waiting){waiting=false;leave()}},{threshold:.35}).observe(wall);
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&visible&&waiting){waiting=false;leave()}});
-  // light follows the pointer: the 3D letter shadows shift like under a moving spotlight
-  if(matchMedia('(pointer:fine)').matches&&!RM){wall.addEventListener('pointermove',e=>{const r=wall.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-    wall.style.setProperty('--sx',(6-x*8).toFixed(1)+'px');wall.style.setProperty('--sy',(7-y*6).toFixed(1)+'px');wall.style.setProperty('--lx',(x*100).toFixed(0)+'%')})}
-})();
 
 /* gallery lightbox */
 const lb=$('#lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('figcaption');
